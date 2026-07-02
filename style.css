@@ -1,0 +1,1197 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #18212f;
+  background: #f7f8fb;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #dce2ea;
+  background: rgba(247, 248, 251, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.brand {
+  color: #0b4f6c;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a {
+  color: #394659;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #0b4f6c;
+}
+
+.nav-links a.active {
+  color: #0b4f6c;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+  width: min(1120px, calc(100% - 32px));
+  min-height: 82vh;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.hero-content h1 {
+  margin: 0;
+  color: #101828;
+  font-size: clamp(44px, 7vw, 84px);
+  line-height: 0.95;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #0b6e69;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.tagline {
+  max-width: 680px;
+  margin: 24px 0;
+  color: #4c5a6d;
+  font-size: 20px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid #0b4f6c;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button.primary {
+  color: #ffffff;
+  background: #0b4f6c;
+}
+
+.button.secondary {
+  color: #0b4f6c;
+  background: transparent;
+}
+
+.profile-card,
+.project-card,
+.certificate-card,
+.skill-grid article,
+.timeline article {
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(24, 33, 47, 0.08);
+}
+
+.profile-card {
+  padding: 28px;
+}
+
+.avatar {
+  display: grid;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 24px;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #0b6e69;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.profile-card h2,
+.section-heading h2,
+.project-card h3,
+.skill-grid h3,
+.timeline h3 {
+  margin: 0;
+  color: #101828;
+}
+
+.profile-card p {
+  margin: 10px 0 0;
+  color: #536174;
+}
+
+.section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+.band {
+  width: 100%;
+  max-width: none;
+  padding-right: max(16px, calc((100% - 1120px) / 2));
+  padding-left: max(16px, calc((100% - 1120px) / 2));
+  background: #eef4f8;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.section-text {
+  max-width: 850px;
+  margin: 0;
+  color: #4c5a6d;
+  font-size: 18px;
+}
+
+.skill-grid,
+.project-grid,
+.certificate-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.skill-grid article,
+.project-card,
+.certificate-card,
+.timeline article {
+  padding: 22px;
+}
+
+.skill-grid p,
+.project-card p,
+.certificate-card p,
+.timeline p {
+  margin: 10px 0 0;
+  color: #536174;
+}
+
+.certificate-card {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+}
+
+.project-card {
+  display: flex;
+  min-height: 250px;
+  flex-direction: column;
+}
+
+.certificate-card-wide {
+  grid-column: 1 / -1;
+}
+
+.certificate-card h3 {
+  margin: 0;
+  color: #101828;
+}
+
+.certificate-card a {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: auto;
+  color: #0b4f6c;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.certificate-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.certificate-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.certificate-list a {
+  display: grid;
+  gap: 6px;
+  width: auto;
+  min-height: 116px;
+  margin-top: 0;
+  padding: 14px;
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+  background: #f7f8fb;
+  color: #394659;
+}
+
+.certificate-list strong {
+  color: #0b4f6c;
+}
+
+.certificate-list span {
+  color: #536174;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.project-card span {
+  display: inline-flex;
+  margin-bottom: 16px;
+  color: #0b6e69;
+  font-weight: 800;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 40px;
+  margin-top: auto;
+  padding: 8px 14px;
+  border: 1px solid #0b4f6c;
+  border-radius: 8px;
+  color: #0b4f6c;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: #ffffff;
+  background: #0b4f6c;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.achievement-list {
+  display: grid;
+  gap: 12px;
+  max-width: 780px;
+  margin: 0;
+  padding-left: 22px;
+  color: #4c5a6d;
+  font-size: 18px;
+}
+
+.contact {
+  padding-bottom: 88px;
+}
+
+.contact-grid {
+  grid-template-columns: repeat(2, 1fr);
+  color: #4c5a6d;
+}
+
+.contact-grid p {
+  min-height: 74px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.contact-grid a {
+  color: #0b4f6c;
+  font-weight: 700;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  max-width: 720px;
+  margin-top: 28px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: #394659;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #18212f;
+  background: #ffffff;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0b6e69;
+  outline: 3px solid rgba(11, 110, 105, 0.14);
+}
+
+.form-status {
+  min-height: 24px;
+  margin: 0;
+  color: #0b6e69;
+  font-weight: 700;
+}
+
+.form-status.error {
+  color: #b42318;
+}
+
+.footer {
+  padding: 24px 16px;
+  color: #536174;
+  text-align: center;
+  border-top: 1px solid #dce2ea;
+  background: #ffffff;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .hero,
+  .skill-grid,
+  .project-grid,
+  .certificate-grid,
+  .certificate-list,
+  .timeline,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 44px 0;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .section,
+  .band {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+}
+html {
+  color-scheme: light;
+}
+
+body {
+  --bg-color: #f7f7fb;
+  --surface-color: #ffffff;
+  --text-color: #1f2937;
+  --muted-text-color: #5b6472;
+  --accent-color: #2563eb;
+  --border-color: #d9dee8;
+  --shadow-color: rgba(31, 41, 55, 0.14);
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.dark-theme {
+  --bg-color: #0f172a;
+  --surface-color: #1e293b;
+  --text-color: #f8fafc;
+  --muted-text-color: #cbd5e1;
+  --accent-color: #93c5fd;
+  --border-color: #475569;
+  --shadow-color: rgba(0, 0, 0, 0.45);
+}
+
+body.dark-theme {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme nav,
+body.dark-theme section {
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+}
+
+body.dark-theme .card,
+body.dark-theme .project,
+body.dark-theme .contact-info,
+body.dark-theme article,
+body.dark-theme form {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 12px 28px var(--shadow-color);
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p,
+body.dark-theme li,
+body.dark-theme span,
+body.dark-theme label {
+  color: var(--text-color) !important;
+}
+
+body.dark-theme small,
+body.dark-theme .muted,
+body.dark-theme .subtitle,
+body.dark-theme .description {
+  color: var(--muted-text-color) !important;
+}
+
+body.dark-theme a {
+  color: var(--accent-color) !important;
+}
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+  background-color: #0b1220 !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+body.dark-theme button:not(.theme-toggle),
+body.dark-theme .btn {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+body:not(.dark-theme) {
+  background: #f7f7fb !important;
+  color: #1f2937 !important;
+}
+
+body:not(.dark-theme) .card,
+body:not(.dark-theme) .project,
+body:not(.dark-theme) .contact-info,
+body:not(.dark-theme) article,
+body:not(.dark-theme) form {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border-color: #d9dee8 !important;
+}
+
+body:not(.dark-theme) h1,
+body:not(.dark-theme) h2,
+body:not(.dark-theme) h3,
+body:not(.dark-theme) h4,
+body:not(.dark-theme) h5,
+body:not(.dark-theme) h6,
+body:not(.dark-theme) p,
+body:not(.dark-theme) li,
+body:not(.dark-theme) span,
+body:not(.dark-theme) label {
+  color: #1f2937 !important;
+}
+
+body:not(.dark-theme) a {
+  color: #1d4ed8 !important;
+}
+
+.theme-toggle {
+  position: fixed !important;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999 !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  min-width: 88px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #111827 !important;
+  border-radius: 999px;
+  background: #111827 !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.32);
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+body.dark-theme .theme-toggle {
+  border-color: #f9fafb !important;
+  background: #f9fafb !important;
+  color: #111827 !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+.theme-toggle__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.theme-toggle span,
+.theme-toggle__icon,
+.theme-toggle__text {
+  color: inherit !important;
+}
+
+@media (max-width: 520px) {
+  .theme-toggle {
+    right: 12px;
+    bottom: 12px;
+    min-width: 44px;
+    padding: 10px;
+  }
+
+  .theme-toggle__text {
+    display: none;
+  }
+}
+
+/* Theme contrast cleanup */
+body:not(.dark-theme) {
+  background-color: #f8fafc !important;
+  color: #111827 !important;
+}
+
+body:not(.dark-theme) :where(header, nav, main, section, footer) {
+  color: #111827 !important;
+}
+
+body:not(.dark-theme) :where(.card, .project, .project-card, .skill, .skill-card, .box, .service, .contact-info, .contact, form, input, textarea, select) {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  border-color: #d1d5db !important;
+}
+
+body:not(.dark-theme) :where(h1, h2, h3, h4, h5, h6, p, li, label) {
+  color: #111827 !important;
+}
+
+body:not(.dark-theme) :where(a) {
+  color: #1d4ed8 !important;
+}
+
+body:not(.dark-theme) :where(button:not(.theme-toggle), .btn) {
+  background-color: #111827 !important;
+  color: #ffffff !important;
+  border-color: #111827 !important;
+}
+
+body.dark-theme {
+  color-scheme: dark;
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+body.dark-theme :where(header, nav, main, section, footer) {
+  background-color: transparent !important;
+  color: #f8fafc !important;
+}
+
+body.dark-theme :where(.card, .project, .project-card, .skill, .skill-card, .box, .service, .contact-info, .contact, form) {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+body.dark-theme :where(h1, h2, h3, h4, h5, h6) {
+  color: #ffffff !important;
+}
+
+body.dark-theme :where(p, li, label) {
+  color: #e2e8f0 !important;
+}
+
+body.dark-theme :where(a) {
+  color: #93c5fd !important;
+}
+
+body.dark-theme :where(input, textarea, select) {
+  background-color: #020617 !important;
+  color: #f8fafc !important;
+  border-color: #64748b !important;
+}
+
+body.dark-theme :where(button:not(.theme-toggle), .btn) {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #f8fafc !important;
+}
+
+body.dark-theme .theme-toggle,
+body.dark-theme .theme-toggle span {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #f8fafc !important;
+}
+
+body:not(.dark-theme) .theme-toggle,
+body:not(.dark-theme) .theme-toggle span {
+  background-color: #111827 !important;
+  color: #ffffff !important;
+  border-color: #111827 !important;
+}
+
+/* Final theme system: keep the color combinations consistent site-wide. */
+body {
+  --page-bg: #f8fafc;
+  --panel-bg: #ffffff;
+  --panel-soft-bg: #eef2f7;
+  --main-text: #0f172a;
+  --soft-text: #475569;
+  --line-color: #cbd5e1;
+  --brand-color: #2563eb;
+  --brand-text: #ffffff;
+  --button-bg: #0f172a;
+  --button-text: #ffffff;
+  --theme-switch-bg: #0f172a;
+  --theme-switch-text: #ffffff;
+  background: var(--page-bg) !important;
+  color: var(--main-text) !important;
+}
+
+body.dark-theme {
+  --page-bg: #0b1120;
+  --panel-bg: #111827;
+  --panel-soft-bg: #1e293b;
+  --main-text: #f8fafc;
+  --soft-text: #cbd5e1;
+  --line-color: #334155;
+  --brand-color: #38bdf8;
+  --brand-text: #082f49;
+  --button-bg: #38bdf8;
+  --button-text: #082f49;
+  --theme-switch-bg: #f8fafc;
+  --theme-switch-text: #0b1120;
+  background: var(--page-bg) !important;
+  color: var(--main-text) !important;
+}
+
+body :where(header, nav, main, section, footer) {
+  color: var(--main-text) !important;
+  border-color: var(--line-color) !important;
+}
+
+body :where(section, main) {
+  background-color: var(--page-bg) !important;
+}
+
+body :where(header, nav, footer) {
+  background-color: var(--panel-bg) !important;
+}
+
+body :where(.card, .project, .project-card, .skill, .skill-card, .box, .service, .contact, .contact-info, .about, .education, .experience, form, article) {
+  background-color: var(--panel-bg) !important;
+  color: var(--main-text) !important;
+  border-color: var(--line-color) !important;
+}
+
+body :where(.hero, .home, .banner, .intro) {
+  background-color: var(--page-bg) !important;
+  color: var(--main-text) !important;
+}
+
+body :where(h1, h2, h3, h4, h5, h6, strong, b) {
+  color: var(--main-text) !important;
+}
+
+body :where(p, li, label, span, small) {
+  color: inherit;
+}
+
+body :where(.subtitle, .description, .muted, .text-muted, .lead, .role, .date) {
+  color: var(--soft-text) !important;
+}
+
+body :where(a, a span) {
+  color: var(--brand-color) !important;
+}
+
+body :where(input, textarea, select) {
+  background-color: var(--panel-soft-bg) !important;
+  color: var(--main-text) !important;
+  border: 1px solid var(--line-color) !important;
+}
+
+body :where(input::placeholder, textarea::placeholder) {
+  color: var(--soft-text) !important;
+  opacity: 1;
+}
+
+body :where(button:not(.theme-toggle), .btn, .button, input[type="submit"]) {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border-color: var(--button-bg) !important;
+}
+
+body :where(button:not(.theme-toggle), .btn, .button, input[type="submit"]) :where(span, i) {
+  color: inherit !important;
+}
+
+.theme-toggle,
+.theme-toggle span {
+  background-color: var(--theme-switch-bg) !important;
+  color: var(--theme-switch-text) !important;
+  border-color: var(--theme-switch-bg) !important;
+}
+
+.profile-image,
+img.avatar {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: 55% top;
+  border-radius: 50%;
+  border: 4px solid #0f766e;
+  background: #ffffff;
+}
+
+body.dark-theme .profile-image,
+body.dark-theme img.avatar {
+  border-color: #38bdf8 !important;
+  background: #172033 !important;
+}
+
+/* Dark theme visibility fixes for profile and certificate panels. */
+body.dark-theme :is(
+  .profile-card,
+  .student-card,
+  .certificate-card,
+  .cert-card,
+  .certificates-card,
+  .project-card,
+  .skill-card,
+  [class*="card"],
+  [class*="certificate"],
+  [class*="profile"]
+) {
+  background: #172033 !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38) !important;
+}
+
+body.dark-theme :is(
+  .profile-card,
+  .student-card,
+  .certificate-card,
+  .cert-card,
+  .certificates-card,
+  .project-card,
+  .skill-card,
+  [class*="card"],
+  [class*="certificate"],
+  [class*="profile"]
+) :is(h1, h2, h3, h4, p, li, span, small, strong) {
+  color: #f8fafc !important;
+}
+
+body.dark-theme :is(
+  .profile-card,
+  .student-card,
+  .certificate-card,
+  .cert-card,
+  .certificates-card,
+  .project-card,
+  .skill-card,
+  [class*="card"],
+  [class*="certificate"],
+  [class*="profile"]
+) :is(.subtitle, .description, .muted, .text-muted, small) {
+  color: #cbd5e1 !important;
+}
+
+body.dark-theme :is(.profile-card, .student-card) .avatar,
+body.dark-theme :is(.profile-card, .student-card) [class*="avatar"] {
+  background: #0f766e !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme :is(.profile-card, .student-card) .avatar *,
+body.dark-theme :is(.profile-card, .student-card) [class*="avatar"] * {
+  color: #ffffff !important;
+}
+
+body.dark-theme :is(.btn, .button, button:not(.theme-toggle), input[type="submit"]) {
+  background: #38bdf8 !important;
+  color: #082f49 !important;
+  border-color: #38bdf8 !important;
+}
+
+body.dark-theme :is(.btn, .button, button:not(.theme-toggle), input[type="submit"]) * {
+  color: #082f49 !important;
+}
+
+body:not(.dark-theme) :is(
+  .profile-card,
+  .student-card,
+  .certificate-card,
+  .cert-card,
+  .certificates-card,
+  .project-card,
+  .skill-card,
+  [class*="card"],
+  [class*="certificate"],
+  [class*="profile"]
+) {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #d1d5db !important;
+}
+
+body:not(.dark-theme) :is(
+  .profile-card,
+  .student-card,
+  .certificate-card,
+  .cert-card,
+  .certificates-card,
+  .project-card,
+  .skill-card,
+  [class*="card"],
+  [class*="certificate"],
+  [class*="profile"]
+) :is(h1, h2, h3, h4, p, li, span, small, strong) {
+  color: #0f172a !important;
+}
+
+/* Certificate cards were keeping a white background in dark mode. */
+body.dark-theme :is(#certificates, .certificates, .certificate-section) :is(
+  div,
+  article,
+  a,
+  li,
+  .card,
+  .certificate,
+  .certificate-card,
+  .cert-card,
+  .cert-item,
+  .certificate-item
+) {
+  background-color: #172033 !important;
+  background-image: none !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-theme :is(#certificates, .certificates, .certificate-section) :is(
+  div,
+  article,
+  a,
+  li,
+  .card,
+  .certificate,
+  .certificate-card,
+  .cert-card,
+  .cert-item,
+  .certificate-item
+)::before,
+body.dark-theme :is(#certificates, .certificates, .certificate-section) :is(
+  div,
+  article,
+  a,
+  li,
+  .card,
+  .certificate,
+  .certificate-card,
+  .cert-card,
+  .cert-item,
+  .certificate-item
+)::after {
+  background: transparent !important;
+}
+
+body.dark-theme :is(#certificates, .certificates, .certificate-section) :is(
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  span,
+  small,
+  strong,
+  a
+) {
+  color: #f8fafc !important;
+}
+
+body.dark-theme :is(#certificates, .certificates, .certificate-section) :is(
+  .certificate-card,
+  .cert-card,
+  .cert-item,
+  .certificate-item,
+  [class*="cert"]
+) {
+  background: #172033 !important;
+  color: #f8fafc !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32) !important;
+}
+
+body.dark-theme :is(#certificates, .certificates, .certificate-section) :is(
+  .certificate-card,
+  .cert-card,
+  .cert-item,
+  .certificate-item,
+  [class*="cert"]
+) * {
+  color: #f8fafc !important;
+}
+
+/* Contact cards should not stay white in dark mode. */
+body.dark-theme :is(#contact, .contact, .contact-info, .contact-section) :is(
+  div,
+  article,
+  form,
+  .card,
+  .contact-card,
+  .contact-item,
+  .info-card,
+  .info-item,
+  [class*="contact"],
+  [class*="info"]
+) {
+  background: #172033 !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32) !important;
+}
+
+body.dark-theme :is(#contact, .contact, .contact-info, .contact-section) :is(
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  span,
+  label,
+  small,
+  strong
+) {
+  color: #f8fafc !important;
+}
+
+body.dark-theme :is(#contact, .contact, .contact-info, .contact-section) a {
+  color: #93c5fd !important;
+}
+
+body.dark-theme :is(#contact, .contact, .contact-info, .contact-section) :is(
+  input,
+  textarea,
+  select
+) {
+  background: #0b1120 !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+body.dark-theme :is(#contact, .contact, .contact-info, .contact-section) :is(
+  input::placeholder,
+  textarea::placeholder
+) {
+  color: #cbd5e1 !important;
+  opacity: 1;
+}
+
+body.dark-theme #contact > *,
+body.dark-theme #contact div,
+body.dark-theme #contact article,
+body.dark-theme #contact a,
+body.dark-theme .contact > *,
+body.dark-theme .contact div,
+body.dark-theme .contact article,
+body.dark-theme .contact a,
+body.dark-theme .contact-info > *,
+body.dark-theme .contact-info div,
+body.dark-theme .contact-info article,
+body.dark-theme .contact-info a {
+  background-color: #172033 !important;
+  background-image: none !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-theme #contact a,
+body.dark-theme .contact a,
+body.dark-theme .contact-info a {
+  color: #93c5fd !important;
+}
+
+body.dark-theme #contact *:not(a),
+body.dark-theme .contact *:not(a),
+body.dark-theme .contact-info *:not(a) {
+  color: #f8fafc !important;
+}
+
+/* Final contact dark-mode fix: target the actual white info boxes. */
+body.dark-theme :is(
+  [id*="contact" i],
+  [class*="contact" i],
+  [class*="connect" i]
+) :is(
+  [class*="box" i],
+  [class*="card" i],
+  [class*="item" i],
+  [class*="info" i],
+  [class*="detail" i],
+  [class*="row" i],
+  div,
+  article,
+  li
+) {
+  background: #172033 !important;
+  background-color: #172033 !important;
+  background-image: none !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-theme :is(
+  [id*="contact" i],
+  [class*="contact" i],
+  [class*="connect" i]
+) :is(p, span, label, strong, small) {
+  color: #f8fafc !important;
+}
+
+body.dark-theme :is(
+  [id*="contact" i],
+  [class*="contact" i],
+  [class*="connect" i]
+) :is(a, a:link, a:visited) {
+  background: transparent !important;
+  color: #93c5fd !important;
+}
+
+body.dark-theme :is(
+  [id*="contact" i],
+  [class*="contact" i],
+  [class*="connect" i]
+) :is(input, textarea, select) {
+  background: #0b1120 !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+/* Absolute final fix for dark contact cards. Keep this at the end. */
+body.dark-theme #contact,
+body.dark-theme .contact,
+body.dark-theme .contact-section,
+body.dark-theme [id*="contact" i],
+body.dark-theme [class*="contact" i] {
+  background-color: #0b1120 !important;
+  color: #f8fafc !important;
+}
+
+body.dark-theme #contact :where(.contact-grid, .contact-list, .contact-details, .contact-cards, .info-grid) > *,
+body.dark-theme .contact :where(.contact-grid, .contact-list, .contact-details, .contact-cards, .info-grid) > *,
+body.dark-theme #contact :where(.contact-box, .contact-card, .contact-item, .info-box, .info-card, .info-item),
+body.dark-theme .contact :where(.contact-box, .contact-card, .contact-item, .info-box, .info-card, .info-item),
+body.dark-theme [id*="contact" i] :where(.contact-box, .contact-card, .contact-item, .info-box, .info-card, .info-item),
+body.dark-theme [class*="contact" i] :where(.contact-box, .contact-card, .contact-item, .info-box, .info-card, .info-item) {
+  background: #172033 !important;
+  background-color: #172033 !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155 !important;
+}
+
+body.dark-theme #contact :where(.contact-grid, .contact-list, .contact-details, .contact-cards, .info-grid) > * *,
+body.dark-theme .contact :where(.contact-grid, .contact-list, .contact-details, .contact-cards, .info-grid) > * *,
+body.dark-theme #contact :where(.contact-box, .contact-card, .contact-item, .info-box, .info-card, .info-item) *,
+body.dark-theme .contact :where(.contact-box, .contact-card, .contact-item, .info-box, .info-card, .info-item) * {
+  color: #f8fafc !important;
+}
+
+body.dark-theme #contact a,
+body.dark-theme .contact a,
+body.dark-theme [id*="contact" i] a,
+body.dark-theme [class*="contact" i] a {
+  color: #93c5fd !important;
+}
